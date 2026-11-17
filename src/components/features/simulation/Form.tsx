@@ -1,7 +1,9 @@
-export function FormSimulation() {
+import { SteppProgress } from '@/components/features/simulation/Progress'
+
+export function SimulationForm() {
   return (
-    <div>
-      <h1>formulario de Simulação</h1>
-    </div>
+    <>
+      <SteppProgress currentStep={2} totalStepp={6} />
+    </>
   )
 }
