@@ -3,7 +3,8 @@ import { ArrowLeft, ArrowRight, type LucideIcon } from 'lucide-react'
 import { Button } from '@/components/shared/Button'
 import { Input, type InputProps } from '@/components/shared/Input'
 
-interface FormStepProps {
+export interface FormStepProps {
+  id: string
   icon: LucideIcon
   title: string
   question: string
@@ -47,7 +48,7 @@ export function FormStep({
 
           <Button
             variant="primary"
-            className=' order-2 flex-1 sm:order-2'
+            className="order-2 flex-1 sm:order-2"
             type="submit"
             icon={!submitButtonProps ? ArrowRight : undefined}
           >
