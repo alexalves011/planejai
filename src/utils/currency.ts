@@ -14,3 +14,11 @@ export function formatCurrency(value: string): string {
 
   return `${groupedInteger},${decimalPart}`
 }
+
+export function parseCurrency(value: string): number {
+  return (
+    parseFloat(
+      value.replace(/\./g, '').replace(',', '.').replace('R$', ''),
+    ) || 0
+  )
+}
